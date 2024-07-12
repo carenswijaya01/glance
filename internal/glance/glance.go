@@ -35,6 +35,11 @@ type Theme struct {
 	ContrastMultiplier       float32               `yaml:"contrast-multiplier"`
 	TextSaturationMultiplier float32               `yaml:"text-saturation-multiplier"`
 	CustomCSSFile            string                `yaml:"custom-css-file"`
+	CustomLogoSrc						 string                `yaml:"custom-logo-src"`
+	CustomLogoAlt						 string                `yaml:"custom-logo-alt"`
+	CustomFavicon						 string                `yaml:"custom-favicon"`
+	TitleSuffix              string                `yaml:"title-suffix"`
+	ToggleFooter             bool                  `yaml:"toggle-footer"`
 }
 
 type Server struct {

@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.single-platform
+    image: my-portfolio:1.0
+    container_name: portfolio
+    volumes:
+      - ./glance.yml:/app/glance.yml
+      - ./assets:/assets
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8080:8080
+    restart: unless-stopped
