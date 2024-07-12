@@ -194,6 +194,11 @@ If you don't want to spend time configuring your own theme, there are [several a
 | contrast-multiplier | number | no | 1 |
 | text-saturation-multiplier | number | no | 1 |
 | custom-css-file | string | no | |
+| custom-logo-src | string | no | will be replaced by custom-logo-alt |
+| custom-logo-alt | string | no | G |
+| custom-favicon | string | no | /static/favicon.png |
+| title-suffix | string | no | Glance |
+| toggle-footer | string | no | false |
 
 #### `light`
 Whether the scheme is light or dark. This does not change the background color, it inverts the text colors so that they look appropriately on a light background.
@@ -234,6 +239,29 @@ theme:
 > .widget-type-rss a {
 >     font-size: 1.5rem;
 > }
+
+#### `custom-logo-src`
+Path to a custom logo file, either external or one from within the server configured assets path. Example:
+
+```yaml
+theme:
+  custom-logo-src: /assets/logo.png
+```
+#### `custom-logo-alt`
+Text that will be displayed in place of the logo if the custom logo file specified in custom-logo-src does not exist. If neither custom-logo-src nor custom-logo-alt is provided, the default Glance logo (G) will be used.
+
+#### `custom-favicon`
+Path to a custom favicon, either external or one from within the server configured assets path. Example:
+
+```yaml
+theme:
+  custom-favicon: /assets/favicon.png
+```
+#### `title-suffix`
+Text that will replace the title suffix in the browser's tab name.
+
+#### `toggle-footer`
+Toggle to show or hide the footer. (true = show, false / empty / undefined = hide)
 
 
 ## Pages & Columns
