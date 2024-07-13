@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile.single-platform
-    image: my-portfolio:1.0
-    container_name: portfolio
+    image: carenswijaya01/glance:1.0
+    container_name: glance
     volumes:
       - ./glance.yml:/app/glance.yml
       - ./assets:/assets
